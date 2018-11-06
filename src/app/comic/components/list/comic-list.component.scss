@@ -1,0 +1,7 @@
+.comics {
+  display: flex;
+  flex-wrap: wrap;
+  .comic {
+    width: 33%;
+  }
+}

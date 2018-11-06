@@ -1,27 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {
-  MatButtonModule, MatNativeDateModule, MatIconModule,
-  MatSidenavModule, MatListModule, MatToolbarModule
-} from '@angular/material';
+import { HttpClientModule } from '@angular/common/http';
+import { ServiceWorkerModule } from '@angular/service-worker';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SideNavComponent } from './components/side-nav/side-nav.component';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    SideNavComponent
+    AppComponent
   ],
   imports: [
     BrowserAnimationsModule,
     AppRoutingModule,
-    MatButtonModule,
-    MatNativeDateModule,
-    MatIconModule,
-    MatSidenavModule,
-    MatListModule,
-    MatToolbarModule
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

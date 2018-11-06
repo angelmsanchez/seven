@@ -1,0 +1,18 @@
+<section id="comic">
+  <div class="card">
+    <div class="card-header">
+      <h4 class="my-2">
+        <ng-container>
+          {{comic.name}}
+        </ng-container>
+      </h4>
+    </div>
+    <img [attr.src]="comic.image" [attr.alt]="comic.name" class="card-img">
+    <div class="card-body">
+      <p class="my-2">{{comic.description}}</p>
+    </div>
+    <div class="card-footer">
+      <h4 class="text-right my-2">{{comic.price}}</h4>
+    </div>
+  </div>
+</section>
