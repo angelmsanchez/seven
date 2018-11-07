@@ -8,7 +8,7 @@
     "lint": "ng lint",
     "ng": "ng",
     "start": "ng serve --open",
-    "start:prod": "ng build --prod && http-server dist -p 4200 -o",
+    "start:prod": "ng build --prod && http-server dist -p 4200 -o -g",
     "test": "ng test"
   },
   "private": true,

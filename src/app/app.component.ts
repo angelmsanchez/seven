@@ -1,10 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { MetaService } from './core/services';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'seven';
+export class AppComponent implements OnInit {
+
+  constructor(
+    private metaService: MetaService,
+  ) { }
+
+  ngOnInit(): void {
+    this.metaData();
+  }
+
+  private metaData() {
+    this.metaService.setMetaData({
+      title: 'Seven',
+      description: 'Description Angular 7'
+    });
+  }
 }
