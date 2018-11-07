@@ -1,7 +1,14 @@
-.comics {
-  display: flex;
-  flex-wrap: wrap;
-  .comic {
-    width: 33%;
+  #comic-list {
+    height: 100%;
+
+    .comic {
+      width: 100%;
+      height: 500px;
+    }
+
+    .example-viewport {
+      height: 100%;
+      width: 33%;
+      border: 1px solid black;
+    }
   }
-}

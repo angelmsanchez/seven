@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 import { ComicRoutingModule } from './comic.routing.module';
 import { ComicListComponent, ComicComponent } from './components';
@@ -8,6 +9,7 @@ import { ComicListComponent, ComicComponent } from './components';
   imports: [
     CommonModule,
     ComicRoutingModule,
+    ScrollingModule,
   ],
   declarations: [
     ComicListComponent,

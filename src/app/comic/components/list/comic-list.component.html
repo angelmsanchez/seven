@@ -1,7 +1,7 @@
-<section>
-  <div class="comics">
-    <div class="comic" *ngFor="let comic of comics">
+<section id="comic-list">
+  <cdk-virtual-scroll-viewport itemSize="500" class="example-viewport">
+    <div class="comic" [ngClass]="comic.id" *cdkVirtualFor="let comic of comics">
       <app-comic [comic]="comic"></app-comic>
     </div>
-  </div>
+  </cdk-virtual-scroll-viewport>
 </section>
