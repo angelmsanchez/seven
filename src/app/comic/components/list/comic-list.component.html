@@ -4,4 +4,7 @@
       <app-comic [comic]="comic"></app-comic>
     </div>
   </cdk-virtual-scroll-viewport>
+  <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let comic of comics" cdkDrag>{{comic.name}}</div>
+  </div>
 </section>

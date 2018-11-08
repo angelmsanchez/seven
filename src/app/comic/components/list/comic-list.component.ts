@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 import { ComicService } from './../../services/comic.service';
 import { MetaService } from '../../../core/services';
@@ -24,6 +25,10 @@ export class ComicListComponent implements OnInit {
         this.comics = data;
         this.metaData(this.comics);
       });
+  }
+
+  drop(event: CdkDragDrop<string[]>): void {
+    moveItemInArray(this.comics, event.previousIndex, event.currentIndex);
   }
 
   private metaData(comics: any[]) {
