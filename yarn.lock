@@ -4253,6 +4253,13 @@ neo-async@^2.5.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.0.tgz#b9d15e4d71c6762908654b5183ed38b753340835"
 
+ng-example-lib@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/ng-example-lib/-/ng-example-lib-0.0.2.tgz#16bda98dbd3db277a7a458cbd824d1a4ef68a709"
+  integrity sha512-DbJb4uI6SXtOgyXvAbHpvw8VkWAF9UBXZdnaUtTQctCUS+UmLbY9U+fqHsEKv9i/a4LZQ+PtHFOZdlb98oqqdA==
+  dependencies:
+    tslib "^1.9.0"
+
 nice-try@^1.0.4:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"

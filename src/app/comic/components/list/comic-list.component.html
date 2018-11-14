@@ -1,7 +1,8 @@
 <section id="comic-list">
   <cdk-virtual-scroll-viewport itemSize="500" class="example-viewport">
     <div class="comic" [ngClass]="comic.id" *cdkVirtualFor="let comic of comics">
-      <app-comic [comic]="comic"></app-comic>
+      <!-- <app-comic [comic]="comic"></app-comic> -->
+      <comic-lib [comic]="comic"></comic-lib>
     </div>
   </cdk-virtual-scroll-viewport>
   <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">

@@ -8,7 +8,7 @@ import { HomeService } from './services/home.service';
 @NgModule({
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
   ],
   declarations: [
     HomeComponent

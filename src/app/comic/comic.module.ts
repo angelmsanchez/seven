@@ -8,10 +8,10 @@ import { ComicListComponent, ComicComponent } from './components';
 
 @NgModule({
   imports: [
-    CommonModule,
     ComicRoutingModule,
     ScrollingModule,
     DragDropModule,
+    CommonModule,
   ],
   declarations: [
     ComicListComponent,
