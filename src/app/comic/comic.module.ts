@@ -6,12 +6,15 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { ComicRoutingModule } from './comic.routing.module';
 import { ComicListComponent, ComicComponent } from './components';
 
+import { NgExampleLibModule } from 'ng-example-lib';
+
 @NgModule({
   imports: [
     ComicRoutingModule,
     ScrollingModule,
     DragDropModule,
     CommonModule,
+    NgExampleLibModule
   ],
   declarations: [
     ComicListComponent,
