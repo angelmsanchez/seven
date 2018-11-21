@@ -3,11 +3,17 @@
   "version": "0.0.0",
   "scripts": {
     "build": "ng build",
+    "build:docker": "docker build -t seven:prod .",
+    "build:docker:dev": "docker build -t seven:dev --build-arg configuration='' .",
     "build:prod": "ng build --prod",
+    "docker:run": "docker run -p 80:80 seven:prod",
+    "docker:run:dev": "docker run -p 80:80 seven:dev",
+    "docker:stop": "docker container stop NAME",
     "e2e": "ng e2e",
     "lint": "ng lint",
     "ng": "ng",
-    "start": "ng serve --open",
+    "start:serve": "ng serve --open",
+    "start": "ng serve --host 0.0.0.0 --poll=500",
     "start:prod": "ng build --prod && http-server dist -p 4200 -o -g",
     "start:server": "json-server --watch db.json",
     "test": "ng test"

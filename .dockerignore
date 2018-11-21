@@ -1,0 +1,8 @@
+.dockerignore
+./log
+./tmp
+yarn.lock
+.git
+*Dockerfile*
+*docker-compose*
+node_modules
