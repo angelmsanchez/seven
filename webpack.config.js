@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require("webpack");
+const webpack = require('webpack');
 const FilterWarningsPlugin = require('webpack-filter-warnings-plugin');
 
 module.exports = {
@@ -9,34 +9,38 @@ module.exports = {
     extensions: ['.js', '.ts']
   },
   entry: {
-    polyfills: "./src/polyfills.ts",
-    main: "./src/main.ts"
+    polyfills: './src/polyfills.ts',
+    main: './src/main.ts'
   },
   output: {
-    path: path.resolve(__dirname, 'dist'), // output directory
-    filename: "[name].js" // name of the generated bundle
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].js'
   },
   module: {
     rules: [{
         test: /\.css$/,
-        loader: ["style-loader", "css-loader"]
+        loader: ['style-loader', 'css-loader']
       },
       {
         test: /\.ts$/,
-        loader: "awesome-typescript-loader"
+        loaders: [
+          'awesome-typescript-loader',
+          'angular2-template-loader',
+          'angular-router-loader'
+        ]
       },
       {
         test: /\.ts$/,
-        enforce: "pre",
+        enforce: 'pre',
         loader: 'tslint-loader'
       },
       {
         test: /\.html$/,
-        loader: "html-loader"
+        loader: 'raw-loader'
       },
       {
         test: /\.scss$/,
-        loader: ["raw-loader", "sass-loader?sourceMap"]
+        loader: ['raw-loader', 'sass-loader?sourceMap']
       }
     ]
   },
@@ -53,8 +57,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "src/index.html",
-      inject: "body"
+      template: 'src/index.html',
+      inject: 'body'
     }),
 
     new webpack.ContextReplacementPlugin(
@@ -65,7 +69,7 @@ module.exports = {
       exclude: /System.import/
     })
   ],
-  devtool: "source-map",
+  devtool: 'source-map',
   devServer: {
     historyApiFallback: true
   }
