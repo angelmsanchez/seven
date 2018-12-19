@@ -3,10 +3,10 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "lib": [
-      "es2018",
+      "es6",
       "dom"
     ],
-    "module": "es2015",
+    "module": "commonjs",
     "moduleResolution": "node",
     "noImplicitAny": true,
     "sourceMap": true,
@@ -18,6 +18,6 @@
   },
   "exclude": [
     "node_modules",
-    "src/main.aot.ts"
+    "src/main.ts"
   ]
 }
