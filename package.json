@@ -19,7 +19,9 @@
     "start:prod": "yarn run build:webpack:prod && http-server dist -p 4200 -o -g",
     "start:serve": "ng serve --open",
     "start:server": "json-server --watch db.json",
-    "test": "ng test"
+    "test": "ng test",
+    "webpack-dev": "cross-env NODE_ENV=development webpack --config config/webpack.dev.js",
+    "webpack-prod": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js"
   },
   "private": true,
   "dependencies": {
@@ -53,10 +55,12 @@
     "angular-router-loader": "^0.8.5",
     "angular2-template-loader": "^0.6.2",
     "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.0.4",
     "clean-webpack-plugin": "^1.0.0",
     "codelyzer": "4.5.0",
     "cross-env": "^5.2.0",
     "css-loader": "^2.0.0",
+    "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "http-server": "^0.11.1",
     "jasmine-core": "2.99.1",
@@ -68,9 +72,11 @@
     "karma-jasmine": "1.1.2",
     "karma-jasmine-html-reporter": "0.2.2",
     "ng-example-lib": "^0.0.3",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
     "protractor": "5.4.0",
     "raw-loader": "^1.0.0",
     "sass-loader": "^7.1.0",
+    "to-string-loader": "^1.1.5",
     "ts-node": "7.0.1",
     "tslint": "5.11.0",
     "tslint-loader": "^3.5.4",
@@ -79,6 +85,7 @@
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10",
-    "webpack-filter-warnings-plugin": "^1.2.1"
+    "webpack-filter-warnings-plugin": "^1.2.1",
+    "webpack-merge": "^4.1.5"
   }
 }
