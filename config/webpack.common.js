@@ -3,7 +3,7 @@
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FilterWarningsPlugin = require('webpack-filter-warnings-plugin');
-
+const TsConfigPathsPlugin = require('awesome-typescript-loader');
 const helpers = require('./helpers');
 const isDev = process.env.NODE_ENV !== 'production';
 
@@ -54,5 +54,6 @@ module.exports = {
     new FilterWarningsPlugin({
       exclude: /System.import/
     }),
+    new TsConfigPathsPlugin()
   ]
 };

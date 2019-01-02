@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "lib": [
@@ -8,16 +10,33 @@
     ],
     "module": "es2015",
     "moduleResolution": "node",
-    "noImplicitAny": true,
+    "noImplicitAny": false,
+    "outDir": "../out-tsc/app",
+    "paths": {
+      "@app/core/*": [
+        "src/app/core/*"
+      ]
+    },
     "sourceMap": true,
+    "strict": true,
+    "strictFunctionTypes": false,
+    "strictNullChecks": false,
     "suppressImplicitAnyIndexErrors": true,
     "target": "es5",
+    "types": [
+      "node"
+    ],
     "typeRoots": [
       "node_modules/@types"
     ]
   },
   "exclude": [
     "node_modules",
-    "src/main.aot.ts"
+    "src/main.aot.ts",
+    "test.ts",
+    "**/*.spec.ts"
+  ],
+  "include": [
+    "./src/**/*"
   ]
 }

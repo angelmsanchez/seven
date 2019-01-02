@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-// import { MetaService } from './core/services';
+import { MetaService } from './core';
 
 @Component({
     selector: 'app-seven',
@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
     constructor(
-        // private metaService: MetaService,
+        private metaService: MetaService,
     ) { }
 
     ngOnInit(): void {
@@ -18,9 +18,9 @@ export class AppComponent implements OnInit {
     }
 
     private metaData() {
-        // this.metaService.setMetaData({
-        //   title: 'Seven',
-        //   description: 'Description Angular 7'
-        // });
+        this.metaService.setMetaData({
+            title: 'Seven',
+            description: 'Description Angular 7'
+        });
     }
 }
