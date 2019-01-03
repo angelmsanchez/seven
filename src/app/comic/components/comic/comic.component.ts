@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { ComicService } from './../../services/comic.service';
-import { MetaService } from '../../../core';
+import { MetaService } from '@app/core/services';
 
 @Component({
     selector: 'app-comic',

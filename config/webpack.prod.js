@@ -11,12 +11,14 @@ const helpers = require('./helpers');
 
 module.exports = webpackMerge(commonConfig, {
   mode: 'production',
+
   output: {
     path: helpers.root('dist'),
     publicPath: '/',
     filename: '[hash].js',
     chunkFilename: '[id].[hash].chunk.js'
   },
+
   optimization: {
     noEmitOnErrors: true,
     splitChunks: {
@@ -53,4 +55,5 @@ module.exports = webpackMerge(commonConfig, {
       entryModule: helpers.root('src', 'app', 'app.module#AppModule')
     })
   ]
+
 });

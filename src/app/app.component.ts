@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { MetaService } from './core';
+import { MetaService } from '@app/core/services';
 
 @Component({
     selector: 'app-seven',

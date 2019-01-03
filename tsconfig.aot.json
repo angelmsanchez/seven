@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "lib": [
@@ -9,6 +10,11 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "noImplicitAny": true,
+    "paths": {
+      "@app/core/*": [
+        "src/app/core/*"
+      ]
+    },
     "sourceMap": true,
     "suppressImplicitAnyIndexErrors": true,
     "target": "es5",

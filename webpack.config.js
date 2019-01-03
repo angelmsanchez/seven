@@ -7,13 +7,16 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const environment = (process.env.NODE_ENV || 'development').trim();
-const isDev = process.env.NODE_ENV !== 'production';
+const isDev = environment !== 'production';
 console.log('IsDev: ' + isDev);
 
 module.exports = {
   mode: environment,
   resolve: {
-    extensions: ['.js', '.ts']
+    extensions: ['.js', '.ts'],
+    alias: {
+      "@app/core": path.resolve(__dirname, 'src/app/core/')
+    }
   },
   entry: {
     vendor: './src/vendor.ts',
@@ -25,10 +28,6 @@ module.exports = {
     filename: '[name].[hash].bundle.js',
     sourceMapFilename: '[file].map',
     chunkFilename: '[id].[chunkhash].chunk.js',
-
-  },
-  resolve: {
-    extensions: ['.ts', '.js']
   },
   module: {
     rules: [{

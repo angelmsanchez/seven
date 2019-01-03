@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 import { ComicService } from './../../services/comic.service';
-import { MetaService } from '../../../core';
+import { MetaService } from '@app/core/services';
 
 @Component({
     selector: 'app-comic-list',

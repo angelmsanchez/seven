@@ -19,6 +19,7 @@
     "start:prod": "yarn run build:webpack:prod && http-server dist -p 4200 -o -g",
     "start:serve": "ng serve --open",
     "start:server": "json-server --watch db.json",
+    "start:webpack-dev": "cross-env NODE_ENV=development webpack-dev-server --config config/webpack.dev.js --progress --watch --hot --open --port 8080 --colors",
     "test": "ng test",
     "webpack-dev": "cross-env NODE_ENV=development webpack --config config/webpack.dev.js",
     "webpack-prod": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js"
