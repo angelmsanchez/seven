@@ -14,7 +14,7 @@
     "e2e": "ng e2e",
     "lint": "ng lint",
     "ng": "ng",
-    "start": "ng serve --host 0.0.0.0 --poll=500",
+    "start": "ng serve --host 0.0.0.0 --poll=500 -o",
     "start:dev": "cross-env NODE_ENV=development webpack-dev-server --progress --watch --hot --open --port 8080 --colors",
     "start:prod": "yarn run build:webpack:prod && http-server dist -p 4200 -o -g",
     "start:serve": "ng serve --open",

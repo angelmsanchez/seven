@@ -3,6 +3,7 @@
 const webpackMerge = require('webpack-merge');
 const commonConfig = require('./webpack.common');
 const helpers = require('./helpers');
+const jsonServer = require('json-server');
 
 module.exports = webpackMerge(commonConfig, {
   mode: 'development',
@@ -39,6 +40,10 @@ module.exports = webpackMerge(commonConfig, {
 
   devServer: {
     historyApiFallback: true,
-    stats: 'minimal'
+    stats: 'minimal',
+    port: 3000,
+    setup: function (app) {
+      app.use('/api', jsonServer.router('db.json'));
+    },
   }
 });

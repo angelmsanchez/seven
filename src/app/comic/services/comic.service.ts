@@ -7,20 +7,20 @@ import { map } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class ComicService {
-  private baseUrl = `${environment.apiUrl}`;
+    private baseUrl = `${environment.apiUrl}`;
 
-  constructor(
-    private http: HttpClient,
-  ) { }
+    constructor(
+        private http: HttpClient,
+    ) { }
 
-  getComics(): Observable<any[]> {
-    return this.http.get<any[]>(this.baseUrl)
-      .pipe(
-        map(data => {
-          return data['rebirth'];
-        }));
-  }
+    getComics(): Observable<any[]> {
+        return this.http.get<any[]>(this.baseUrl)
+            .pipe(
+                map(data => {
+                    return data['rebirth'];
+                }));
+    }
 }
